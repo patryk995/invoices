@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.4ee64c6d.chunk.css",
-    "main.js": "/static/js/main.9af6d48a.chunk.js",
-    "main.js.map": "/static/js/main.9af6d48a.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.412dedb7.js",
-    "runtime-main.js.map": "/static/js/runtime-main.412dedb7.js.map",
-    "static/css/2.5125ad23.chunk.css": "/static/css/2.5125ad23.chunk.css",
-    "static/js/2.31dbe390.chunk.js": "/static/js/2.31dbe390.chunk.js",
-    "static/js/2.31dbe390.chunk.js.map": "/static/js/2.31dbe390.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.bc9514ca4b012d42bc98b70e50aa4e79.js": "/precache-manifest.bc9514ca4b012d42bc98b70e50aa4e79.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.5125ad23.chunk.css.map": "/static/css/2.5125ad23.chunk.css.map",
-    "static/css/main.4ee64c6d.chunk.css.map": "/static/css/main.4ee64c6d.chunk.css.map",
-    "static/media/semantic.min.css": "/static/media/outline-icons.ef60a4f6.woff",
-    "static/media/sanidentas_logo.jpeg": "/static/media/sanidentas_logo.abf16b97.jpeg"
+    "main.css": "/invoices/static/css/main.4ee64c6d.chunk.css",
+    "main.js": "/invoices/static/js/main.fdf69c75.chunk.js",
+    "main.js.map": "/invoices/static/js/main.fdf69c75.chunk.js.map",
+    "runtime-main.js": "/invoices/static/js/runtime-main.d3100efb.js",
+    "runtime-main.js.map": "/invoices/static/js/runtime-main.d3100efb.js.map",
+    "static/css/2.9a004642.chunk.css": "/invoices/static/css/2.9a004642.chunk.css",
+    "static/js/2.31dbe390.chunk.js": "/invoices/static/js/2.31dbe390.chunk.js",
+    "static/js/2.31dbe390.chunk.js.map": "/invoices/static/js/2.31dbe390.chunk.js.map",
+    "index.html": "/invoices/index.html",
+    "precache-manifest.f7faa674eb0f750d3fb777ee705ab34d.js": "/invoices/precache-manifest.f7faa674eb0f750d3fb777ee705ab34d.js",
+    "service-worker.js": "/invoices/service-worker.js",
+    "static/css/2.9a004642.chunk.css.map": "/invoices/static/css/2.9a004642.chunk.css.map",
+    "static/css/main.4ee64c6d.chunk.css.map": "/invoices/static/css/main.4ee64c6d.chunk.css.map",
+    "static/media/semantic.min.css": "/invoices/static/media/outline-icons.ef60a4f6.woff",
+    "static/media/sanidentas_logo.jpeg": "/invoices/static/media/sanidentas_logo.abf16b97.jpeg"
   }
 }
