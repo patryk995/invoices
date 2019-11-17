@@ -12,6 +12,7 @@ function App() {
 
     return (
         <div className="App">
+            {window.innerWidth}
             <header className="App-header">
                 <img src={Logo} alt="sanidentas" style={{ width: 150 }} />
             </header>
