@@ -98,7 +98,7 @@ export const MainForm = ({ date, toggleCalendar }: IProps) => {
                             value={format(date, "yyyy-MM-dd")}
                         />
                         <Form.Group>
-                            <Form.Field width={8}>
+                            <Form.Field width={6}>
                                 <label>Sąskaita</label>
                                 <Input
                                     type="number"
@@ -109,7 +109,7 @@ export const MainForm = ({ date, toggleCalendar }: IProps) => {
                                     placeholder="Sąskaita"
                                 />
                             </Form.Field>
-                            <Form.Field width={8}>
+                            <Form.Field width={10}>
                                 <label></label>
                                 <Input
                                     type="number"
@@ -122,7 +122,7 @@ export const MainForm = ({ date, toggleCalendar }: IProps) => {
                             </Form.Field>
                         </Form.Group>
                         <Form.Group>
-                            <Form.Field width={8}>
+                            <Form.Field width={6}>
                                 <label>Orderis</label>
                                 <Input
                                     type="number"
@@ -134,7 +134,7 @@ export const MainForm = ({ date, toggleCalendar }: IProps) => {
                                 />
                             </Form.Field>
 
-                            <Form.Field width={8}>
+                            <Form.Field width={10}>
                                 <label />
                                 <Input
                                     label="-"
@@ -147,8 +147,8 @@ export const MainForm = ({ date, toggleCalendar }: IProps) => {
                             </Form.Field>
                         </Form.Group>
 
-                        <Form.Group widths="equal">
-                            <Form.Field>
+                        <Form.Group>
+                            <Form.Field width={10}>
                                 <label>Suma</label>
 
                                 <Input
@@ -161,7 +161,7 @@ export const MainForm = ({ date, toggleCalendar }: IProps) => {
                                 />
                             </Form.Field>
 
-                            <Form.Field>
+                            <Form.Field width={6}>
                                 <label />
                                 <Input
                                     label="ct"
