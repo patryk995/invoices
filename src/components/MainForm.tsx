@@ -187,6 +187,7 @@ export const MainForm = ({ date, toggleCalendar }: IProps) => {
                         <Form.Input
                             label="Asmens (įmonės) kodas"
                             icon="barcode"
+                            type="number"
                             name={FVEnum.PersonalCode}
                             value={formValues.personalCode}
                             onChange={setValue}
@@ -217,6 +218,10 @@ export const MainForm = ({ date, toggleCalendar }: IProps) => {
             </Form>
 
             <div className="buttons-container">
+                <Button secondary onClick={() => window.location.reload()}>
+                    Išvalyti formą
+                </Button>
+
                 <ReactToPrint
                     onAfterPrint={incrementInvoice}
                     trigger={() => (

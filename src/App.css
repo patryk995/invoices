@@ -5,7 +5,7 @@
 .App-header {
     width: 100%;
     text-align: center;
-    padding: 30px;
+    padding: 20px 0 10px;
     box-sizing: border-box;
 }
 label {
@@ -17,11 +17,14 @@ label {
     max-width: 1000px;
 }
 .form-inner {
+    flex-wrap: wrap;
     display: flex;
 }
 .form-column {
     flex: 1;
     padding: 0 20px;
+    margin: auto;
+    min-width: 450px;
     display: flex;
     flex-direction: column;
 }
@@ -53,6 +56,7 @@ label {
 
 .buttons-container {
     display: flex;
+    padding: 20px 0;
     justify-content: space-evenly;
 }
 th,
