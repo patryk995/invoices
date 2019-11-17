@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ec1375f4fadcf6c18ded17c95ce3a01c",
+    "revision": "4821e13a987dc0fc6f5dfdc3244f62ef",
     "url": "/invoices/index.html"
   },
   {
-    "revision": "bccf5cf0f5ccacfaade2",
+    "revision": "a016aef5d21d1b576de9",
     "url": "/invoices/static/css/2.9a004642.chunk.css"
   },
   {
-    "revision": "d96504ce6bfbedd65356",
-    "url": "/invoices/static/css/main.4ee64c6d.chunk.css"
+    "revision": "a9760339625dfdb00c5e",
+    "url": "/invoices/static/css/main.4e232d35.chunk.css"
   },
   {
-    "revision": "bccf5cf0f5ccacfaade2",
-    "url": "/invoices/static/js/2.31dbe390.chunk.js"
+    "revision": "a016aef5d21d1b576de9",
+    "url": "/invoices/static/js/2.d7f8631b.chunk.js"
   },
   {
-    "revision": "d96504ce6bfbedd65356",
-    "url": "/invoices/static/js/main.fdf69c75.chunk.js"
+    "revision": "a9760339625dfdb00c5e",
+    "url": "/invoices/static/js/main.6a25dae0.chunk.js"
   },
   {
     "revision": "8b193b7704bae0bd2804",
     "url": "/invoices/static/js/runtime-main.d3100efb.js"
+  },
+  {
+    "revision": "78c623c3cf78544fe758a1d627cbb146",
+    "url": "/invoices/static/media/Sanidentas_logotipas.78c623c3.svg"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",

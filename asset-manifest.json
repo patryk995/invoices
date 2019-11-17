@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/invoices/static/css/main.4ee64c6d.chunk.css",
-    "main.js": "/invoices/static/js/main.fdf69c75.chunk.js",
-    "main.js.map": "/invoices/static/js/main.fdf69c75.chunk.js.map",
+    "main.css": "/invoices/static/css/main.4e232d35.chunk.css",
+    "main.js": "/invoices/static/js/main.6a25dae0.chunk.js",
+    "main.js.map": "/invoices/static/js/main.6a25dae0.chunk.js.map",
     "runtime-main.js": "/invoices/static/js/runtime-main.d3100efb.js",
     "runtime-main.js.map": "/invoices/static/js/runtime-main.d3100efb.js.map",
     "static/css/2.9a004642.chunk.css": "/invoices/static/css/2.9a004642.chunk.css",
-    "static/js/2.31dbe390.chunk.js": "/invoices/static/js/2.31dbe390.chunk.js",
-    "static/js/2.31dbe390.chunk.js.map": "/invoices/static/js/2.31dbe390.chunk.js.map",
+    "static/js/2.d7f8631b.chunk.js": "/invoices/static/js/2.d7f8631b.chunk.js",
+    "static/js/2.d7f8631b.chunk.js.map": "/invoices/static/js/2.d7f8631b.chunk.js.map",
     "index.html": "/invoices/index.html",
-    "precache-manifest.f7faa674eb0f750d3fb777ee705ab34d.js": "/invoices/precache-manifest.f7faa674eb0f750d3fb777ee705ab34d.js",
+    "precache-manifest.64b304436e3fed816ef8cfb8599a68de.js": "/invoices/precache-manifest.64b304436e3fed816ef8cfb8599a68de.js",
     "service-worker.js": "/invoices/service-worker.js",
     "static/css/2.9a004642.chunk.css.map": "/invoices/static/css/2.9a004642.chunk.css.map",
-    "static/css/main.4ee64c6d.chunk.css.map": "/invoices/static/css/main.4ee64c6d.chunk.css.map",
+    "static/css/main.4e232d35.chunk.css.map": "/invoices/static/css/main.4e232d35.chunk.css.map",
+    "static/media/Sanidentas_logotipas.svg": "/invoices/static/media/Sanidentas_logotipas.78c623c3.svg",
     "static/media/semantic.min.css": "/invoices/static/media/outline-icons.ef60a4f6.woff",
     "static/media/sanidentas_logo.jpeg": "/invoices/static/media/sanidentas_logo.abf16b97.jpeg"
   }
