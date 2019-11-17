@@ -1,5 +1,6 @@
 {
     "name": "print-invoices",
+    "homepage": "https://patryk995.github.io/invoices/",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
