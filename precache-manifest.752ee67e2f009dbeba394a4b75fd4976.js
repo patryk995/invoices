@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "67798c36ebf52ac5d00032a6acf2c627",
+    "revision": "0a384931c45c82e455871e42cf3cee9d",
     "url": "/invoices/index.html"
   },
   {
-    "revision": "a016aef5d21d1b576de9",
+    "revision": "6e86062c985842342e6c",
     "url": "/invoices/static/css/2.9a004642.chunk.css"
   },
   {
-    "revision": "f18fd0eddc2a788677de",
+    "revision": "dffbcff3cedd90f10810",
     "url": "/invoices/static/css/main.21aa8fd9.chunk.css"
   },
   {
-    "revision": "a016aef5d21d1b576de9",
-    "url": "/invoices/static/js/2.d7f8631b.chunk.js"
+    "revision": "6e86062c985842342e6c",
+    "url": "/invoices/static/js/2.4157525f.chunk.js"
   },
   {
-    "revision": "f18fd0eddc2a788677de",
-    "url": "/invoices/static/js/main.9151bb83.chunk.js"
+    "revision": "dffbcff3cedd90f10810",
+    "url": "/invoices/static/js/main.6033aea6.chunk.js"
   },
   {
     "revision": "8b193b7704bae0bd2804",
@@ -90,9 +90,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
     "url": "/invoices/static/media/outline-icons.ef60a4f6.woff"
-  },
-  {
-    "revision": "abf16b97f5ec1d8065d63b0db4150f0a",
-    "url": "/invoices/static/media/sanidentas_logo.abf16b97.jpeg"
   }
 ]);
