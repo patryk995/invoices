@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/invoices/static/css/main.21aa8fd9.chunk.css",
-    "main.js": "/invoices/static/js/main.c03aab6b.chunk.js",
-    "main.js.map": "/invoices/static/js/main.c03aab6b.chunk.js.map",
-    "runtime-main.js": "/invoices/static/js/runtime-main.d3100efb.js",
-    "runtime-main.js.map": "/invoices/static/js/runtime-main.d3100efb.js.map",
-    "static/css/2.9a004642.chunk.css": "/invoices/static/css/2.9a004642.chunk.css",
-    "static/js/2.4157525f.chunk.js": "/invoices/static/js/2.4157525f.chunk.js",
-    "static/js/2.4157525f.chunk.js.map": "/invoices/static/js/2.4157525f.chunk.js.map",
+    "main.css": "/invoices/static/css/main.7837e168.chunk.css",
+    "main.js": "/invoices/static/js/main.cddbab48.chunk.js",
+    "main.js.map": "/invoices/static/js/main.cddbab48.chunk.js.map",
+    "runtime-main.js": "/invoices/static/js/runtime-main.01c052b8.js",
+    "runtime-main.js.map": "/invoices/static/js/runtime-main.01c052b8.js.map",
+    "static/css/2.c51b6406.chunk.css": "/invoices/static/css/2.c51b6406.chunk.css",
+    "static/js/2.0049db7f.chunk.js": "/invoices/static/js/2.0049db7f.chunk.js",
+    "static/js/2.0049db7f.chunk.js.map": "/invoices/static/js/2.0049db7f.chunk.js.map",
     "index.html": "/invoices/index.html",
-    "precache-manifest.6d7e1b21cf49b6accd6dd5f06cfb0c3e.js": "/invoices/precache-manifest.6d7e1b21cf49b6accd6dd5f06cfb0c3e.js",
+    "precache-manifest.c6578a6f3008f865024035302a23a548.js": "/invoices/precache-manifest.c6578a6f3008f865024035302a23a548.js",
     "service-worker.js": "/invoices/service-worker.js",
-    "static/css/2.9a004642.chunk.css.map": "/invoices/static/css/2.9a004642.chunk.css.map",
-    "static/css/main.21aa8fd9.chunk.css.map": "/invoices/static/css/main.21aa8fd9.chunk.css.map",
+    "static/css/2.c51b6406.chunk.css.map": "/invoices/static/css/2.c51b6406.chunk.css.map",
+    "static/css/main.7837e168.chunk.css.map": "/invoices/static/css/main.7837e168.chunk.css.map",
     "static/media/Sanidentas_logotipas.svg": "/invoices/static/media/Sanidentas_logotipas.78c623c3.svg",
-    "static/media/semantic.min.css": "/invoices/static/media/outline-icons.ef60a4f6.woff"
+    "static/media/sanidentas_logo.jpeg": "/invoices/static/media/sanidentas_logo.abf16b97.jpeg"
   }
 }
