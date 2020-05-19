@@ -10,6 +10,65 @@
 }
 label {
     min-height: 19px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    display: block;
+}
+input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.field {
+    margin-bottom: 14px;
+}
+.double-input {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+.left-db-input {
+    width: 30%;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    text-align: center;
+}
+.right-db-input {
+    width: 70%;
+    padding-left: 30px;
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    text-align: center;
+}
+.double-input::before {
+    content: '-';
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 30%;
+}
+.eur,
+.ct {
+    width: 48%;
+    padding-right: 35px;
+}
+.double-input.price::before {
+    content: 'Eur';
+    left: 39%;
+}
+.double-input.price::after {
+    content: 'ct';
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 3%;
 }
 .main-form {
     width: 90%;
@@ -21,6 +80,7 @@ label {
     display: flex;
 }
 .form-column {
+    box-sizing: border-box;
     flex: 1;
     padding: 20px;
     margin: auto;
@@ -59,6 +119,18 @@ label {
     display: flex;
     padding: 20px 0;
     justify-content: space-evenly;
+}
+.btn {
+    background-color: #2185d0;
+    color: #fff;
+    font-size: 14px;
+    border: 1px solid #fff;
+    padding: 11px 21px;
+    font-weight: 700;
+    border-radius: 4px;
+}
+.btn.secondary {
+    background: #1b1c1d;
 }
 th,
 td {

@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
-import { format } from "date-fns";
-import ReactToPrint from "react-to-print";
-import InvoicePage from "./InvoicePage";
-import { Form, Input, Button } from "semantic-ui-react";
-import { priceToWordsHelper, getLocal, setLocal } from "../helpers";
-import { FVEnum } from "../types";
-import OrderPage from "./OrderPage";
+import React, { useState, useEffect, useRef } from 'react';
+import format from 'date-fns/format';
+import ReactToPrint from 'react-to-print';
+import InvoicePage from './InvoicePage';
+import { priceToWordsHelper, getLocal, setLocal } from '../helpers';
+import { FVEnum } from '../types';
+import OrderPage from './OrderPage';
 
 interface IProps {
     date: Date;
@@ -22,7 +21,7 @@ export const MainForm = ({ date, toggleCalendar }: IProps) => {
             [FVEnum.Order1]: 0,
             [FVEnum.Order2]: 0,
             [FVEnum.Invoice1]: 0,
-            [FVEnum.Invoice2]: 0
+            [FVEnum.Invoice2]: 0,
         };
         const savedNumbersObject = getLocal();
         let numbers;
@@ -35,15 +34,15 @@ export const MainForm = ({ date, toggleCalendar }: IProps) => {
             ...numbers,
             [FVEnum.Eur]: null,
             [FVEnum.Ct]: null,
-            [FVEnum.PriceInWords]: "",
+            [FVEnum.PriceInWords]: '',
 
-            [FVEnum.Name]: "",
+            [FVEnum.Name]: '',
             [FVEnum.PersonalCode]: null,
-            [FVEnum.Address]: ""
+            [FVEnum.Address]: '',
         };
     });
-    const setValue = (e: any, data: any) => {
-        const { name, value } = data;
+    const setValue = (e: any) => {
+        const { name, value } = e.target;
         if (name) {
             setFormValue({ ...formValues, [name]: value });
         }
@@ -53,13 +52,13 @@ export const MainForm = ({ date, toggleCalendar }: IProps) => {
             [FVEnum.Order1]: formValues[FVEnum.Order1],
             [FVEnum.Order2]: formValues[FVEnum.Order2],
             [FVEnum.Invoice1]: formValues[FVEnum.Invoice1],
-            [FVEnum.Invoice2]: formValues[FVEnum.Invoice2]
+            [FVEnum.Invoice2]: formValues[FVEnum.Invoice2],
         });
     }, [
         formValues[FVEnum.Order1],
         formValues[FVEnum.Order2],
         formValues[FVEnum.Invoice1],
-        formValues[FVEnum.Invoice2]
+        formValues[FVEnum.Invoice2],
     ]);
 
     useEffect(() => {
@@ -67,182 +66,195 @@ export const MainForm = ({ date, toggleCalendar }: IProps) => {
             ...formValues,
             [FVEnum.PriceInWords]: `${priceToWordsHelper(
                 Number(formValues[FVEnum.Eur])
-            )} ${formValues[FVEnum.Ct] ? formValues[FVEnum.Ct] : 0} ct`
+            )} ${formValues[FVEnum.Ct] ? formValues[FVEnum.Ct] : 0} ct`,
         });
     }, [formValues[FVEnum.Eur], formValues[FVEnum.Ct]]);
     const incrementInvoice = () => {
         setFormValue({
             ...formValues,
-            [FVEnum.Invoice2]: Number(formValues[FVEnum.Invoice2]) + 1
+            [FVEnum.Invoice2]: Number(formValues[FVEnum.Invoice2]) + 1,
         });
     };
     const incrementOrder = () => {
         setFormValue({
             ...formValues,
-            [FVEnum.Order2]: Number(formValues[FVEnum.Order2]) + 1
+            [FVEnum.Order2]: Number(formValues[FVEnum.Order2]) + 1,
         });
     };
-    console.log(orderRef);
     return (
-        <div className="main-form">
-            <Form>
-                <div className="form-inner">
-                    <div className="form-column">
-                        <Form.Input
-                            icon="calendar outline"
-                            placeholder="Data"
-                            label="Data"
-                            id="date"
+        <div className='main-form'>
+            <div className='form-inner'>
+                <div className='form-column'>
+                    <div className='field'>
+                        <label htmlFor='date'>Data</label>
+                        <input
+                            placeholder='Data'
+                            id='date'
                             readOnly
                             onClick={toggleCalendar}
-                            value={format(date, "yyyy-MM-dd")}
+                            value={format(date, 'yyyy-MM-dd')}
                         />
-                        <Form.Group>
-                            <Form.Field width={6}>
-                                <label>Sąskaita</label>
-                                <Input
-                                    type="number"
-                                    label={"SDS"}
-                                    name={FVEnum.Invoice1}
-                                    value={formValues.invoice1}
-                                    onChange={setValue}
-                                    placeholder="Sąskaita"
-                                />
-                            </Form.Field>
-                            <Form.Field width={10}>
-                                <label></label>
-                                <Input
-                                    type="number"
-                                    label="-"
-                                    name={FVEnum.Invoice2}
-                                    value={formValues.invoice2}
-                                    onChange={setValue}
-                                    placeholder="Sąskaita"
-                                />
-                            </Form.Field>
-                        </Form.Group>
-                        <Form.Group>
-                            <Form.Field width={6}>
-                                <label>Orderis</label>
-                                <Input
-                                    type="number"
-                                    label={"SD"}
-                                    name={FVEnum.Order1}
-                                    value={formValues.order1}
-                                    onChange={setValue}
-                                    placeholder="Orderis"
-                                />
-                            </Form.Field>
-
-                            <Form.Field width={10}>
-                                <label />
-                                <Input
-                                    label="-"
-                                    type="number"
-                                    name={FVEnum.Order2}
-                                    value={formValues.order2}
-                                    onChange={setValue}
-                                    placeholder="Orderis"
-                                />
-                            </Form.Field>
-                        </Form.Group>
-
-                        <Form.Group>
-                            <Form.Field width={10}>
-                                <label>Suma</label>
-
-                                <Input
-                                    label="Eur"
-                                    type="number"
-                                    name={FVEnum.Eur}
-                                    value={formValues[FVEnum.Eur]}
-                                    onChange={setValue}
-                                    placeholder="Eurai"
-                                />
-                            </Form.Field>
-
-                            <Form.Field width={6}>
-                                <label />
-                                <Input
-                                    label="ct"
-                                    type="number"
-                                    name={FVEnum.Ct}
-                                    value={formValues[FVEnum.Ct]}
-                                    onChange={setValue}
-                                    placeholder="Centai"
-                                />
-                            </Form.Field>
-                        </Form.Group>
                     </div>
-                    <div className="form-column">
-                        <Form.Input
-                            label="Vardas Pavardė"
-                            icon="user outline"
+
+                    <div className='field'>
+                        <label htmlFor='SDS2'>Sąskaita (SDS)</label>
+                        <div className='double-input'>
+                            <input
+                                id='SDS1'
+                                className='left-db-input'
+                                type='number'
+                                name={FVEnum.Invoice1}
+                                value={formValues.invoice1}
+                                onChange={setValue}
+                                placeholder='Sąskaita'
+                            />
+
+                            <input
+                                id='SDS2'
+                                type='number'
+                                className='right-db-input'
+                                name={FVEnum.Invoice2}
+                                value={formValues.invoice2}
+                                onChange={setValue}
+                                placeholder='Sąskaita'
+                            />
+                        </div>
+                    </div>
+                    <div className='field'>
+                        <label htmlFor={FVEnum.Order2}>Orderis (SD)</label>
+                        <div className='double-input'>
+                            <input
+                                className='left-db-input'
+                                type='number'
+                                name={FVEnum.Order1}
+                                value={formValues.order1}
+                                onChange={setValue}
+                                placeholder='Orderis'
+                            />
+
+                            <input
+                                className='right-db-input'
+                                type='number'
+                                id={FVEnum.Order2}
+                                name={FVEnum.Order2}
+                                value={formValues.order2}
+                                onChange={setValue}
+                                placeholder='Orderis'
+                            />
+                        </div>
+                    </div>
+
+                    <div className='field'>
+                        <label htmlFor={FVEnum.Eur}>Suma</label>
+                        <div className='double-input price'>
+                            <input
+                                className='eur'
+                                type='number'
+                                id={FVEnum.Eur}
+                                name={FVEnum.Eur}
+                                value={formValues[FVEnum.Eur]}
+                                onChange={setValue}
+                                placeholder='Eurai'
+                            />
+
+                            <input
+                                className='ct'
+                                type='number'
+                                name={FVEnum.Ct}
+                                value={formValues[FVEnum.Ct]}
+                                onChange={setValue}
+                                placeholder='Centai'
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className='form-column'>
+                    <div className='field'>
+                        <label htmlFor={FVEnum.Name}>Vardas Pavardė</label>
+                        <input
+                            id={FVEnum.Name}
                             name={FVEnum.Name}
                             value={formValues.name}
                             onChange={setValue}
-                            placeholder="Vardas Pavardė"
+                            placeholder='Vardas Pavardė'
                         />
+                    </div>
 
-                        <Form.Input
-                            label="Asmens (įmonės) kodas"
-                            icon="barcode"
-                            type="number"
+                    <div className='field'>
+                        <label htmlFor={FVEnum.PersonalCode}>
+                            Asmens (įmonės) kodas
+                        </label>
+                        <input
+                            type='number'
+                            id={FVEnum.PersonalCode}
                             name={FVEnum.PersonalCode}
                             value={formValues.personalCode}
                             onChange={setValue}
-                            placeholder="Asmens (įmonės) kodas"
+                            placeholder='Asmens (įmonės) kodas'
                         />
-                        <Form.Input
-                            label="Adresas"
-                            icon="home"
-                            type="text"
+                    </div>
+                    <div className='field'>
+                        <label htmlFor={FVEnum.Address}>Adresas</label>
+                        <input
+                            type='text'
+                            id={FVEnum.Address}
                             name={FVEnum.Address}
                             value={formValues.address}
                             onChange={setValue}
-                            placeholder="Adresas"
+                            placeholder='Adresas'
                         />
-                        <Form.Input
-                            icon="euro sign"
-                            label="Suma žodžiais"
-                            placeholder="Suma žodžiais"
+                    </div>
+                    <div className='field'>
+                        <label htmlFor='sumaZodziais'>Suma žodžiais</label>
+                        <input
+                            id='sumaZodziais'
+                            placeholder='Suma žodžiais'
                             value={
                                 Boolean(formValues[FVEnum.Eur]) ||
                                 Boolean(formValues[FVEnum.Ct])
                                     ? formValues.eurInWords
-                                    : ""
+                                    : ''
                             }
                         />
                     </div>
                 </div>
-            </Form>
+            </div>
 
-            <div className="buttons-container">
-                <Button secondary onClick={() => window.location.reload()}>
+            <div className='buttons-container'>
+                <button
+                    className='btn secondary'
+                    onClick={() => window.location.reload()}
+                >
                     Išvalyti formą
-                </Button>
+                </button>
 
                 <ReactToPrint
                     onAfterPrint={incrementInvoice}
                     trigger={() => (
-                        <Button primary>Spausdinti sąskaita faktūra</Button>
+                        <button className='btn primary'>
+                            Spausdinti sąskaita faktūra
+                        </button>
                     )}
                     content={() => invoiceRef && invoiceRef.current}
                 />
                 <ReactToPrint
                     onAfterPrint={incrementInvoice}
                     trigger={() => (
-                        <Button primary>Spausdinti 2 sąskaitas faktūras</Button>
+                        <button className='btn primary'>
+                            Spausdinti 2 sąskaitas faktūras
+                        </button>
                     )}
                     content={() => doubleInvoiceRef && doubleInvoiceRef.current}
                 />
                 <ReactToPrint
                     onAfterPrint={incrementOrder}
-                    trigger={() => <Button primary>Spausdinti KPO</Button>}
+                    trigger={() => (
+                        <button className='btn primary'>Spausdinti KPO</button>
+                    )}
                     content={() => orderRef && orderRef.current}
                 />
             </div>
-            <div style={{ display: "none" }}>
+            <div style={{ display: 'none' }}>
                 <div ref={orderRef}>
                     <OrderPage formValues={formValues} date={date} />
                 </div>

@@ -1,7 +1,6 @@
-import React, { Component } from "react";
-import { FVEnum } from "../types";
-import { format } from "date-fns";
-import { dateToWords } from "../helpers";
+import React, { Component } from 'react';
+import { FVEnum } from '../types';
+import { dateToWords } from '../helpers';
 interface IProps {
     formValues: {
         [FVEnum.Order1]: number;
@@ -22,13 +21,13 @@ export class OrderPage extends Component<IProps> {
     render() {
         const { formValues: fV, date } = this.props;
         return (
-            <div style={{ padding: "50px 80px" }}>
+            <div style={{ padding: '50px 80px' }}>
                 {this.order(fV, date)}
                 <div
                     style={{
-                        width: "100%",
-                        borderBottom: "1px dashed",
-                        margin: "60px 0 30px"
+                        width: '100%',
+                        borderBottom: '1px dashed',
+                        margin: '50px 0 30px',
                     }}
                 />
                 {this.order(fV, date)}
@@ -39,11 +38,12 @@ export class OrderPage extends Component<IProps> {
         <>
             <div
                 style={{
-                    width: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    textAlign: "right",
-                    fontSize: 12
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    textAlign: 'right',
+                    fontSize: 12,
+                    boxSizing: 'border-box',
                 }}
             >
                 <div>UAB "Sanidentas"</div>
@@ -54,45 +54,45 @@ export class OrderPage extends Component<IProps> {
 
             <div
                 style={{
-                    width: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    margin: "15px 0"
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    margin: '15px 0',
                 }}
             >
                 <div style={{ fontSize: 15 }}>
                     KASOS PAJAMŲ ORDERIS Serija SD Nr. {fV[FVEnum.Order1]}-
                     {fV[FVEnum.Order2]}
                 </div>
-                <div style={{ padding: "5px 0" }}>{dateToWords(date)}</div>
+                <div style={{ padding: '5px 0' }}>{dateToWords(date)}</div>
             </div>
-            <div style={{ padding: "5px 0" }}>Mokėtojas: {fV[FVEnum.Name]}</div>
-            <div style={{ padding: "5px 0" }}>
+            <div style={{ padding: '5px 0' }}>Mokėtojas: {fV[FVEnum.Name]}</div>
+            <div style={{ padding: '5px 0' }}>
                 Asmens (įmonės) kodas: {fV[FVEnum.PersonalCode]}
             </div>
-            <div style={{ padding: "5px 0" }}>
+            <div style={{ padding: '5px 0' }}>
                 Adresas: {fV[FVEnum.Address]}
             </div>
-            <div style={{ padding: "20px 0" }}>
+            <div style={{ padding: '20px 0' }}>
                 Operacijos turinys: dantų gydymas
             </div>
-            <div style={{ padding: "5px 0" }}>
-                Suma: {fV[FVEnum.Eur]} {fV[FVEnum.Ct] ? fV[FVEnum.Ct] : "00"}
+            <div style={{ padding: '5px 0' }}>
+                Suma: {fV[FVEnum.Eur]} {fV[FVEnum.Ct] ? fV[FVEnum.Ct] : '00'}
             </div>
-            <div style={{ padding: "5px 0" }}>
-                Suma žodžiais:{" "}
-                <span style={{ fontStyle: "italic" }}>
+            <div style={{ padding: '5px 0' }}>
+                Suma žodžiais:{' '}
+                <span style={{ fontStyle: 'italic' }}>
                     {fV[FVEnum.PriceInWords]}.
                 </span>
             </div>
-            <div style={{ display: "flex", padding: "15px 0" }}>
+            <div style={{ display: 'flex', padding: '15px 0' }}>
                 <span>Vyr. Buhalteris (buhalteris)</span>
-                <div style={{ flex: 1, borderBottom: "1px solid" }} />
+                <div style={{ flex: 1, borderBottom: '1px solid' }} />
             </div>
-            <div style={{ display: "flex", padding: "15px 0" }}>
+            <div style={{ display: 'flex', padding: '15px 0' }}>
                 <span>Gavo</span>
-                <div style={{ flex: 1, borderBottom: "1px solid" }} />
+                <div style={{ flex: 1, borderBottom: '1px solid' }} />
             </div>
         </>
     );
