@@ -84,7 +84,7 @@ export class InvoicePage extends Component<IProps> {
                     El. p. info@sanidentas.lt www.sanidentas.lt
                 </div>
                 <div style={{ padding: '5px 0' }}>
-                    A. s. LT19 4010 0495 0122 7931 AB DNB banke, kodas 40100
+                    A. s. {process.env.REACT_APP_SASKAITA} swedbank
                 </div>
                 <div
                     style={{

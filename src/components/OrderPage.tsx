@@ -49,7 +49,7 @@ export class OrderPage extends Component<IProps> {
                 <div>UAB "Sanidentas"</div>
                 <div>Karaliaučiaus g. 2-58, LT-06281 Vilnius</div>
                 <div>įmonės kodas 3000994735</div>
-                <div>A/S LT19 4010 0495 0122 7931</div>
+                <div>A/S {process.env.REACT_APP_SASKAITA}</div>
             </div>
 
             <div
